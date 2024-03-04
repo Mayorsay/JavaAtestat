@@ -1,3 +1,8 @@
+/* атестат. ноутбуки. java.
+ * https://gb.ru/lessons/402571/homework
+ * map + set + hashset + scanner + object
+ */
+
 import java.util.*;
 
 class Laptop {
@@ -7,8 +12,7 @@ class Laptop {
     private String os;
     private String color;
 
-    // Конструктор
-    public Laptop(String model, int ramGb, int storageGb, String os, String color) {
+    public Laptop(String model, int ramGb, int storageGb, String os, String color) { // обьявление конструктора
         this.model = model;
         this.ramGb = ramGb;
         this.storageGb = storageGb;
@@ -18,11 +22,11 @@ class Laptop {
 
     // методы
     // геттеры для получения значений полей
-    public String getModel() {
+    public String getModel() {  // исправление к laptop (обьявление методов)
         return model;
     }
 
-    public int getRamGb() {                         // исправление к laptop (обьявление методов)
+    public int getRamGb() {
         return ramGb;
     }
 
@@ -51,13 +55,13 @@ class Main {
 
 
 
-        // Метод фильтрации
+        // метод фильтрации
         filterLaptops(laptops);
     }
 
-    // Метод фильтрации
+    // метод фильтрации
     public static void filterLaptops(Set<Laptop> laptops) {
-        // Критерии фильтрации
+        // критерии фильтрации
         Map<String, Object> filters = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
 
@@ -126,7 +130,7 @@ class Main {
                     }
                     break;
                 case "color":
-                    if (!laptop.getColor().equals(value)) {
+                    if (!laptop.getColor().equals(value)) { // equals - сравнение по значению внутри объекта
                         return false;
                     }
                     break;
